@@ -176,6 +176,11 @@ export const InventorySection = ({
                                 FEATURED
                               </span>
                             )}
+                            {Array.isArray(p.variants) && p.variants.length > 0 && (
+                              <span style={{ fontSize: 10, fontWeight: 700, padding: '1px 6px', borderRadius: 3, backgroundColor: '#EDE9FE', color: '#6D28D9' }}>
+                                {p.variants.length} {p.variantLabel || 'Variants'}
+                              </span>
+                            )}
                           </div>
                         </div>
                       </div>

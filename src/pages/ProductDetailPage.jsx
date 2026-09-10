@@ -355,7 +355,7 @@ export const ProductDetailPage = () => {
             }}
           >
             {product.onSale && (
-              <span className="badge-sale-circle" style={{ width: 36, height: 36, fontSize: 11 }}>
+              <span className="badge-sale-circle">
                 Sale!
               </span>
             )}

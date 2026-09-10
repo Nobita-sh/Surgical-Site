@@ -1251,6 +1251,26 @@
   box-shadow: 0 2px 5px rgba(255, 77, 48, 0.3);
 }
 
+/* Corner Sale badge on Product Detail Page */
+.badge-sale-circle {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: #E11D48;
+  color: #FFFFFF;
+  font-family: var(--font-primary), 'Roboto', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 4;
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.3);
+  pointer-events: none;
+}
+
+
 /* Quick Add Shopping Bag Icon button centered at bottom of image */
 .card-bag-btn {
   position: absolute;

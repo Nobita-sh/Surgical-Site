@@ -27,7 +27,14 @@ export const HomePage = () => {
     api.cms.getHomepageSections()
       .then(data => {
         if (isMounted && Array.isArray(data) && data.length > 0) {
-          setSections(data.filter(s => s.id !== 'brands'));
+          const list = data.filter(s => s.id !== 'brands');
+          // Guarantee Hero is at the top of the homepage (index 0)
+          const heroIdx = list.findIndex(s => s.id === 'hero');
+          if (heroIdx > 0) {
+            const [heroSec] = list.splice(heroIdx, 1);
+            list.unshift(heroSec);
+          }
+          setSections(list);
         }
       })
       .catch(() => {});

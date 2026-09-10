@@ -230,3 +230,97 @@ export const REVIEW_AUDIT_LOGS = [
     timestamp: '2026-03-08T16:20:00Z'
   }
 ];
+
+export const REVIEW_HOMEPAGE_SECTIONS = [
+  {
+    id: 'hero',
+    name: 'Hero Showcase Banner',
+    active: true,
+    desc: 'Main promotional hero banner with headline, subtext, and call-to-action buttons',
+    content: {
+      tagline: 'Online Surgical Equipment store in Pakistan',
+      title: 'Boost Your Health with Surgicals.pk',
+      subtext: 'Shop hospital-grade surgical items, medical furniture, diagnostic devices, and mobility aids with 100% genuine warranty & nationwide delivery.',
+      primaryBtnText: 'SHOP NOW',
+      primaryBtnLink: '/shop',
+      whatsappBtnText: 'ORDER ON WHATSAPP',
+      whatsappNumber: '923037333378'
+    }
+  },
+  {
+    id: 'categories',
+    name: 'Most Selling Categories Hub',
+    active: true,
+    desc: 'Interactive category slider with real equipment photography',
+    content: {
+      title: 'MOST SELLING CATEGORIES',
+      subtitle: 'Browse certified hospital and clinical equipment'
+    }
+  },
+  {
+    id: 'belts',
+    name: 'Unisex Body Belts & Rehabilitation',
+    active: true,
+    desc: 'Orthopedic braces and rehabilitation support showcase',
+    content: {
+      title: 'UNISEX BODY BELT & BRACES',
+      viewAllText: 'View All',
+      viewAllLink: '/category/knee-support'
+    }
+  },
+  {
+    id: 'promo-3col',
+    name: '3-Column Promotional Banners',
+    active: true,
+    desc: 'Feature cards highlighting Wheelchairs, Commode Chairs, and Walkers',
+    content: {
+      card1Title: 'Wheel Chair',
+      card1Link: '/category/commode-chair',
+      card1Image: '/assets/banners/wheelchair.png',
+      card2Title: 'Commode-Chairs',
+      card2Link: '/category/commode-chair',
+      card2Image: '/assets/banners/commode-chair.png',
+      card3Title: 'Walking-Frames',
+      card3Link: '/category/commode-chair',
+      card3Image: '/assets/banners/walking-frame.png'
+    }
+  },
+  {
+    id: 'promo-split',
+    name: '2-Column Split Promotional Banners',
+    active: true,
+    desc: 'Side-by-side featured promotions for diagnostic and surgical lines',
+    content: {
+      banner1Title: 'Diagnostic Equipment & Vital Signs',
+      banner1Subtitle: 'Precision Patient Monitors & Ultrasonic Scanners',
+      banner1Link: '/category/electro-medical',
+      banner1Image: '/assets/products/icu-monitor.png',
+      banner2Title: 'Hospital Grade Surgical Instruments',
+      banner2Subtitle: 'CE & ISO Certified Operating Theatre Equipment',
+      banner2Link: '/category/gynae-instruments',
+      banner2Image: '/assets/products/forceps.png'
+    }
+  },
+  {
+    id: 'best-sellers',
+    name: 'Best Selling Products Showcase',
+    active: true,
+    desc: 'Top catalog products with real pricing, discounts, and Quick-Add',
+    content: {
+      title: 'BEST SELLING PRODUCTS',
+      subtitle: 'Hospital-grade tools, instruments, and patient recovery essentials trusted by leading clinicians.',
+      itemLimit: 10
+    }
+  },
+  {
+    id: 'story',
+    name: 'Surgicals.pk Clinical Heritage & Story',
+    active: true,
+    desc: 'Brand legacy, certified authenticity assurance, and healthcare commitment',
+    content: {
+      title: 'Reliable Surgical Equipment Direct to Hospitals & Clinics',
+      description: 'Surgicals.pk has been serving the healthcare community across Pakistan since 2018 with certified medical devices, durable hospital furniture, and reliable diagnostic tools.'
+    }
+  }
+];
+

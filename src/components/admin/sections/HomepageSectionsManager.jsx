@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../../../services/api';
 import { useToast } from '../../../context/ToastContext';
+import { REVIEW_HOMEPAGE_SECTIONS } from '../../../data/reviewMockData';
 
 export const HomepageSectionsManager = () => {
   const { addToast } = useToast();
@@ -19,13 +20,28 @@ export const HomepageSectionsManager = () => {
     try {
       const data = await api.cms.getHomepageSections();
       if (Array.isArray(data) && data.length > 0) {
-        setHomepageSections(data);
+        // Guarantee hero is positioned at index 0 at the top
+        const list = [...data];
+        const heroIdx = list.findIndex(s => s.id === 'hero');
+        if (heroIdx > 0) {
+          const [heroSec] = list.splice(heroIdx, 1);
+          list.unshift(heroSec);
+        }
+        setHomepageSections(list);
+      } else {
+        setHomepageSections(REVIEW_HOMEPAGE_SECTIONS);
       }
     } catch (err) {
-      addToast('Failed to load homepage layout: ' + err.message, 'error');
+      setHomepageSections(REVIEW_HOMEPAGE_SECTIONS);
+      addToast('Loaded default layout: ' + err.message, 'info');
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleResetLayout = () => {
+    setHomepageSections(REVIEW_HOMEPAGE_SECTIONS);
+    addToast('Sections restored to default sequence with Hero at top. Click "Publish Layout Changes" to save live.');
   };
 
   const handleSave = async () => {
@@ -86,6 +102,16 @@ export const HomepageSectionsManager = () => {
         </div>
 
         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+          <button
+            type="button"
+            onClick={handleResetLayout}
+            className="btn-framed"
+            style={{ padding: '8px 14px', borderRadius: 6, fontSize: 12, display: 'flex', alignItems: 'center', gap: 5 }}
+            title="Reset sections order with Hero at the very top"
+          >
+            <span>↺ Restore Hero to Top</span>
+          </button>
+
           <Link
             to="/"
             target="_blank"
@@ -168,6 +194,24 @@ export const HomepageSectionsManager = () => {
 
                   {/* Controls */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    {/* Move to Top */}
+                    {idx > 0 && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const updated = [...homepageSections];
+                          const [moved] = updated.splice(idx, 1);
+                          updated.unshift(moved);
+                          setHomepageSections(updated);
+                        }}
+                        className="btn-framed"
+                        title="Move straight to top of page"
+                        style={{ padding: '4px 8px', fontSize: 11, fontWeight: 700, color: '#800020' }}
+                      >
+                        Top ⇈
+                      </button>
+                    )}
+
                     {/* Move Up */}
                     <button
                       type="button"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useProducts } from '../../context/ProductContext';
 import { useCart } from '../../context/CartContext';
@@ -7,7 +7,16 @@ export const ProductQuickViewModal = () => {
   const { selectedProduct, isQuickViewOpen, closeQuickView } = useProducts();
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
+  const [selectedVariant, setSelectedVariant] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (selectedProduct?.variants && Array.isArray(selectedProduct.variants) && selectedProduct.variants.length > 0) {
+      setSelectedVariant(selectedProduct.variants[0]);
+    } else {
+      setSelectedVariant('');
+    }
+  }, [selectedProduct]);
 
   if (!isQuickViewOpen || !selectedProduct) return null;
 
@@ -22,7 +31,12 @@ export const ProductQuickViewModal = () => {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, padding: 24 }}>
           {/* Left Thumbnail */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#FAFAFA', borderRadius: 12, border: '1px solid #ECECEC', padding: 20 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#FAFAFA', borderRadius: 12, border: '1px solid #ECECEC', padding: 20 }}>
+            {selectedProduct.onSale && (
+              <span className="badge-sale-circle">
+                Sale!
+              </span>
+            )}
             <img
               src={selectedProduct.image}
               alt={selectedProduct.name}
@@ -48,9 +62,6 @@ export const ProductQuickViewModal = () => {
                   <span style={{ fontSize: 20, fontWeight: 800, color: '#000' }}>
                     Rs {selectedProduct.price.toLocaleString()}
                   </span>
-                  <span className="badge-sale-circle" style={{ position: 'static', width: 28, height: 28, fontSize: 9 }}>
-                    Sale!
-                  </span>
                 </>
               ) : selectedProduct.priceRange ? (
                 <span style={{ fontSize: 20, fontWeight: 800, color: '#000' }}>
@@ -72,6 +83,36 @@ export const ProductQuickViewModal = () => {
               <div><strong>Stock:</strong> <span style={{ color: '#059669' }}>In Stock ({selectedProduct.stock} units)</span></div>
             </div>
 
+            {/* Variety Selector */}
+            {selectedProduct.variants && Array.isArray(selectedProduct.variants) && selectedProduct.variants.length > 0 && (
+              <div style={{ marginBottom: 16 }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: '#1E293B', marginBottom: 6 }}>
+                  {selectedProduct.variantLabel || 'Option'}: <span style={{ color: '#800020' }}>{selectedVariant}</span>
+                </div>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  {selectedProduct.variants.map(v => (
+                    <button
+                      key={v}
+                      type="button"
+                      onClick={() => setSelectedVariant(v)}
+                      style={{
+                        padding: '5px 12px',
+                        fontSize: 12,
+                        fontWeight: 600,
+                        borderRadius: 6,
+                        border: selectedVariant === v ? '1.5px solid #800020' : '1px solid #CBD5E1',
+                        backgroundColor: selectedVariant === v ? '#FFF1F2' : '#FFFFFF',
+                        color: selectedVariant === v ? '#800020' : '#334155',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      {v}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Quantity and Actions */}
             <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 16 }}>
               <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #DDD', borderRadius: 6 }}>
@@ -92,7 +133,7 @@ export const ProductQuickViewModal = () => {
 
               <button
                 onClick={() => {
-                  addToCart(selectedProduct, quantity);
+                  addToCart({ ...selectedProduct, ...(selectedVariant ? { selectedVariant } : {}) }, quantity);
                   closeQuickView();
                 }}
                 className="btn-solid-maroon"

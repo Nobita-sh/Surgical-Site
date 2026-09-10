@@ -1,4 +1,4 @@
-import { REVIEW_USERS, REVIEW_ORDERS, REVIEW_SETTINGS, REVIEW_AUDIT_LOGS } from '../data/reviewMockData';
+import { REVIEW_USERS, REVIEW_ORDERS, REVIEW_SETTINGS, REVIEW_AUDIT_LOGS, REVIEW_HOMEPAGE_SECTIONS } from '../data/reviewMockData';
 import { SEED_PRODUCTS, SEED_CATEGORIES } from '../data/seedData';
 
 const BASE_URL = '/api';
@@ -127,7 +127,23 @@ function handleReviewFallback(path, method, body) {
     return SEED_CATEGORIES;
   }
 
-  // CMS Layout
+  // CMS Layout (Homepage Sections)
+  if (cleanPath.startsWith('/cms/homepage-sections')) {
+    if (method === 'PUT' && body) {
+      localStorage.setItem('spk_homepage_sections', JSON.stringify(body));
+      return body;
+    }
+    const saved = localStorage.getItem('spk_homepage_sections');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      } catch (e) {}
+    }
+    return REVIEW_HOMEPAGE_SECTIONS;
+  }
+
+  // Other CMS Layout
   if (cleanPath.startsWith('/cms')) {
     if (method === 'PUT') return body;
     return [];

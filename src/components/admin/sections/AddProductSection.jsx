@@ -1,6 +1,41 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { api } from '../../../services/api';
 
+const VARIANT_PRESETS = [
+  {
+    name: 'Apparel Sizes (S, M, L, XL, XXL)',
+    label: 'Size',
+    options: ['Small (S)', 'Medium (M)', 'Large (L)', 'Extra Large (XL)', 'XXL']
+  },
+  {
+    name: 'Basic Sizes (S, M, L, XL)',
+    label: 'Size',
+    options: ['S', 'M', 'L', 'XL']
+  },
+  {
+    name: 'Mounting / Stand Types',
+    label: 'Mounting Type',
+    options: ['Desk Stand', 'Floor Stand', 'Wall Mount']
+  },
+  {
+    name: 'Liquid Volumes',
+    label: 'Volume',
+    options: ['100 ml', '250 ml', '500 ml', '1 Liter', '5 Liters']
+  },
+  {
+    name: 'Packaging Bundles',
+    label: 'Package',
+    options: ['Pack of 10', 'Pack of 50', 'Box of 100']
+  },
+  {
+    name: 'Operation / Power Mode',
+    label: 'Model Type',
+    options: ['Manual Operation', 'Electric / Battery Powered']
+  }
+];
+
+const LABEL_SUGGESTIONS = ['Size', 'Option', 'Mounting Type', 'Volume', 'Model Type', 'Color', 'Package'];
+
 export const AddProductSection = ({
   categories = [],
   productToEdit = null,
@@ -26,6 +61,39 @@ export const AddProductSection = ({
     featured: false,
     bestSeller: false
   });
+
+  // Variant / Options State
+  const [hasVariants, setHasVariants] = useState(false);
+  const [variantLabel, setVariantLabel] = useState('Size');
+  const [variants, setVariants] = useState([]);
+  const [newVariantInput, setNewVariantInput] = useState('');
+
+  const handleAddVariant = (customValue) => {
+    const val = (customValue !== undefined ? customValue : newVariantInput).trim();
+    if (!val) return;
+    if (variants.includes(val)) {
+      setNewVariantInput('');
+      return;
+    }
+    setVariants(prev => [...prev, val]);
+    setNewVariantInput('');
+  };
+
+  const handleRemoveVariant = (indexToRemove) => {
+    setVariants(prev => prev.filter((_, idx) => idx !== indexToRemove));
+  };
+
+  const handleApplyPreset = (preset) => {
+    setVariantLabel(preset.label);
+    setVariants(preset.options);
+  };
+
+  const handleKeyDownVariant = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleAddVariant();
+    }
+  };
 
   const fileInputRef = useRef(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -129,6 +197,11 @@ export const AddProductSection = ({
         featured: Boolean(productToEdit.featured),
         bestSeller: Boolean(productToEdit.bestSeller)
       });
+      const editVariants = Array.isArray(productToEdit.variants) ? productToEdit.variants : [];
+      setHasVariants(editVariants.length > 0);
+      setVariantLabel(productToEdit.variantLabel || 'Size');
+      setVariants(editVariants);
+      setNewVariantInput('');
     } else {
       setFormData({
         name: '',
@@ -145,6 +218,10 @@ export const AddProductSection = ({
         featured: false,
         bestSeller: false
       });
+      setHasVariants(false);
+      setVariantLabel('Size');
+      setVariants([]);
+      setNewVariantInput('');
     }
   }, [productToEdit, categories]);
 
@@ -165,7 +242,9 @@ export const AddProductSection = ({
         stock: Number(formData.stock) || 0,
         onSale: Boolean(formData.onSale),
         featured: Boolean(formData.featured),
-        bestSeller: Boolean(formData.bestSeller)
+        bestSeller: Boolean(formData.bestSeller),
+        variantLabel: hasVariants && variants.length > 0 ? (variantLabel.trim() || 'Option') : '',
+        variants: hasVariants ? variants : []
       };
 
       if (isEditing && onUpdateProduct) {
@@ -277,6 +356,249 @@ export const AddProductSection = ({
               style={{ width: '100%', padding: '10px 12px', borderRadius: 6, border: '1px solid #D1D5DB', fontSize: 13.5 }}
             />
           </div>
+        </div>
+
+        {/* Product Options & Variations Builder */}
+        <div style={{
+          backgroundColor: '#F8FAFC',
+          borderRadius: 8,
+          border: '1px solid #E2E8F0',
+          padding: '16px 18px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 14
+        }}>
+          {/* Header & Toggle Checkbox */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 10 }}>
+            <div>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 9, fontSize: 13.5, fontWeight: 700, color: '#0F172A', cursor: 'pointer' }}>
+                <input
+                  type="checkbox"
+                  checked={hasVariants}
+                  onChange={e => {
+                    const checked = e.target.checked;
+                    setHasVariants(checked);
+                    if (checked && variants.length === 0) {
+                      setVariantLabel('Size');
+                      setVariants(['Small (S)', 'Medium (M)', 'Large (L)', 'Extra Large (XL)']);
+                    }
+                  }}
+                  style={{ width: 16, height: 16, cursor: 'pointer', accentColor: '#800020' }}
+                />
+                Enable Product Options / Variations (e.g. Sizes, Mountings, Volumes)
+              </label>
+              <p style={{ margin: '3px 0 0 25px', fontSize: 12, color: '#64748B' }}>
+                Toggle on if buyers can choose different options (such as Small/Medium/Large or Desk/Floor Stand). If unticked, no option selector will appear on the product page.
+              </p>
+            </div>
+
+            {hasVariants && variants.length > 0 && (
+              <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 8px', borderRadius: 4, backgroundColor: '#E0E7FF', color: '#3730A3' }}>
+                {variants.length} {variants.length === 1 ? 'Option' : 'Options'} Configured
+              </span>
+            )}
+          </div>
+
+          {/* Collapsible Content when hasVariants is true */}
+          {hasVariants && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14, paddingTop: 10, borderTop: '1px dashed #CBD5E1' }}>
+              {/* Row 1: Option Attribute Label */}
+              <div>
+                <label style={{ fontSize: 12, fontWeight: 600, color: '#334155', display: 'block', marginBottom: 4 }}>
+                  Option Type / Attribute Name
+                </label>
+                <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+                  <input
+                    type="text"
+                    placeholder="e.g. Size, Option, Mounting Type, Volume"
+                    value={variantLabel}
+                    onChange={e => setVariantLabel(e.target.value)}
+                    style={{ flex: '1 1 200px', maxWidth: 300, padding: '8px 12px', borderRadius: 6, border: '1px solid #D1D5DB', fontSize: 13, backgroundColor: '#FFF' }}
+                  />
+                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+                    <span style={{ fontSize: 11, color: '#64748B', fontWeight: 600 }}>Quick Names:</span>
+                    {LABEL_SUGGESTIONS.map(sug => (
+                      <button
+                        key={sug}
+                        type="button"
+                        onClick={() => setVariantLabel(sug)}
+                        style={{
+                          padding: '3px 9px',
+                          fontSize: 11,
+                          fontWeight: variantLabel === sug ? 700 : 500,
+                          borderRadius: 4,
+                          border: variantLabel === sug ? '1px solid #800020' : '1px solid #CBD5E1',
+                          backgroundColor: variantLabel === sug ? '#FFF1F2' : '#FFFFFF',
+                          color: variantLabel === sug ? '#800020' : '#475569',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        {sug}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 2: Add Custom Option Value */}
+              <div>
+                <label style={{ fontSize: 12, fontWeight: 600, color: '#334155', display: 'block', marginBottom: 4 }}>
+                  Add Option Values / Choices
+                </label>
+                <div style={{ display: 'flex', gap: 8, alignItems: 'center', maxWidth: 520 }}>
+                  <input
+                    type="text"
+                    placeholder="Type an option (e.g. 'XXL' or 'Floor Stand') and press Enter"
+                    value={newVariantInput}
+                    onChange={e => setNewVariantInput(e.target.value)}
+                    onKeyDown={handleKeyDownVariant}
+                    style={{ flex: 1, padding: '8px 12px', borderRadius: 6, border: '1px solid #D1D5DB', fontSize: 13, backgroundColor: '#FFF' }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => handleAddVariant()}
+                    className="btn-framed"
+                    style={{ padding: '8px 14px', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap' }}
+                  >
+                    + Add Option
+                  </button>
+                </div>
+              </div>
+
+              {/* Row 3: Quick 1-Click Preset Bundles */}
+              <div>
+                <span style={{ fontSize: 11, color: '#64748B', fontWeight: 600, display: 'block', marginBottom: 5 }}>
+                  Or apply a 1-click Preset Bundle:
+                </span>
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                  {VARIANT_PRESETS.map((preset, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => handleApplyPreset(preset)}
+                      style={{
+                        padding: '4px 10px',
+                        fontSize: 11,
+                        borderRadius: 4,
+                        border: '1px solid #E2E8F0',
+                        backgroundColor: '#FFFFFF',
+                        color: '#1E293B',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 4
+                      }}
+                      title={`Sets ${preset.label}: ${preset.options.join(', ')}`}
+                    >
+                      <span style={{ fontWeight: 700, color: '#800020' }}>+</span>
+                      <span>{preset.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Row 4: Currently Configured Option Chips */}
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: '#334155' }}>
+                    Configured {variantLabel || 'Option'} Choices ({variants.length})
+                  </span>
+                  {variants.length > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => setVariants([])}
+                      style={{ background: 'none', border: 'none', color: '#DC2626', fontSize: 11, cursor: 'pointer', fontWeight: 600 }}
+                    >
+                      Clear All
+                    </button>
+                  )}
+                </div>
+
+                {variants.length === 0 ? (
+                  <div style={{ padding: '10px 14px', backgroundColor: '#FEF2F2', border: '1px dashed #FECACA', borderRadius: 6, fontSize: 12, color: '#991B1B' }}>
+                    ⚠️ No option choices added yet. Please type an option above and click <strong>Add Option</strong> or choose a preset.
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+                    {variants.map((v, i) => (
+                      <span
+                        key={i}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: 6,
+                          backgroundColor: '#FFF1F2',
+                          color: '#800020',
+                          border: '1px solid #FECDD3',
+                          padding: '4px 10px',
+                          borderRadius: 20,
+                          fontSize: 12,
+                          fontWeight: 600
+                        }}
+                      >
+                        {v}
+                        <button
+                          type="button"
+                          onClick={() => handleRemoveVariant(i)}
+                          style={{
+                            background: 'none',
+                            border: 'none',
+                            color: '#800020',
+                            fontSize: 14,
+                            cursor: 'pointer',
+                            padding: 0,
+                            lineHeight: 1,
+                            fontWeight: 700
+                          }}
+                          title="Remove option"
+                        >
+                          ×
+                        </button>
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Row 5: Live Storefront Preview */}
+              {variants.length > 0 && (
+                <div style={{
+                  backgroundColor: '#FFFFFF',
+                  padding: '12px 16px',
+                  borderRadius: 6,
+                  border: '1px solid #E2E8F0',
+                  marginTop: 2
+                }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: '#64748B', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 8 }}>
+                    Customer Storefront Preview
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                    <span style={{ fontWeight: 700, fontSize: 13, color: '#0F172A' }}>
+                      {variantLabel || 'Option'}:
+                    </span>
+                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                      {variants.map((v, idx) => (
+                        <span
+                          key={v}
+                          style={{
+                            padding: '5px 12px',
+                            fontSize: 12,
+                            fontWeight: 600,
+                            borderRadius: 6,
+                            border: idx === 0 ? '1.5px solid #800020' : '1px solid #CBD5E1',
+                            backgroundColor: idx === 0 ? '#FFF1F2' : '#FFFFFF',
+                            color: idx === 0 ? '#800020' : '#475569'
+                          }}
+                        >
+                          {v} {idx === 0 && <span style={{ fontSize: 10, opacity: 0.8 }}>(default)</span>}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Storefront Feature Toggles */}
