@@ -14,7 +14,6 @@ const DEFAULT_SECTIONS = [
   { id: 'belts', active: true },
   { id: 'promo-3col', active: true },
   { id: 'promo-split', active: true },
-  { id: 'brands', active: true },
   { id: 'best-sellers', active: true },
   { id: 'story', active: true }
 ];
@@ -28,7 +27,7 @@ export const HomePage = () => {
     api.cms.getHomepageSections()
       .then(data => {
         if (isMounted && Array.isArray(data) && data.length > 0) {
-          setSections(data);
+          setSections(data.filter(s => s.id !== 'brands'));
         }
       })
       .catch(() => {});
@@ -36,7 +35,7 @@ export const HomePage = () => {
   }, []);
 
   const renderSection = (sec) => {
-    if (sec.active === false) return null;
+    if (sec.active === false || sec.id === 'brands') return null;
     const content = sec.content || {};
 
     switch (sec.id) {
@@ -71,16 +70,6 @@ export const HomePage = () => {
           />
         );
 
-      case 'brands':
-        return (
-          <PromoBanners
-            key={sec.id}
-            brandsTitle={content.title || 'OFFICIAL MEDICAL BRAND PARTNERS'}
-            show3Col={false}
-            showSplit={false}
-            showBrands={true}
-          />
-        );
 
       case 'best-sellers': {
         const displayLimit = Number(content.itemLimit) || 10;

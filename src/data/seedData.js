@@ -289,7 +289,7 @@ export const SEED_PRODUCTS = [
     reviewCount: 16,
     featured: false,
     bestSeller: true,
-    image: prodImg('Ankle\\nSplint'),
+    image: '/assets/products/ankle-splint.png',
     shortDescription: 'Rigid medial-lateral anatomical ankle stabilizer with contoured shell pads and adjustable hook-and-loop compression straps.',
     description: 'Designed for acute ankle sprains, post-operative ligament recovery, and chronic ankle instability. Provides firm structural support while fitting comfortably inside athletic shoes.',
     specifications: {
@@ -314,7 +314,7 @@ export const SEED_PRODUCTS = [
     reviewCount: 19,
     featured: false,
     bestSeller: true,
-    image: prodImg('Cast\\nBoot'),
+    image: '/assets/products/cast-boot.png',
     shortDescription: 'Rocker sole post-op cast shoe for fractured foot protection, plaster cast walking, and metatarsal trauma recovery.',
     description: 'Features a non-skid rocker bottom sole that promotes natural gait while protecting plaster or fiberglass casts from wear, dirt, and moisture. Breathable canvas upper with adjustable velcro fasteners.',
     specifications: {
@@ -339,7 +339,7 @@ export const SEED_PRODUCTS = [
     reviewCount: 52,
     featured: false,
     bestSeller: true,
-    image: prodImg('Sitz Bath\\nTub'),
+    image: '/assets/products/sitz-bath-tub.png',
     shortDescription: 'Ergonomic toilet-fit sitz bath tub with manual water flusher pressure pump, anti-overflow drainage holes, and collapsible design.',
     description: 'Essential post-partum, hemorrhoid, and post-fissure soothing therapeutic basin. Fits securely onto all standard Pakistani and international commode toilet seats. Includes hand flusher bulb for gentle water massage.',
     specifications: {
@@ -365,7 +365,7 @@ export const SEED_PRODUCTS = [
     reviewCount: 64,
     featured: false,
     bestSeller: true,
-    image: prodImg('Lab Coat\\nWhite'),
+    image: '/assets/products/lab-coat.png',
     shortDescription: 'Premium poly-cotton blend professional doctor lab coat with multiple pockets and side vent slits.',
     description: 'Tailored for doctors, medical students, surgeons, and laboratory staff. Breathable, durable, stain-resistant, and machine-washable. Available in standard unisex sizing with embroidered pocket options.',
     specifications: {
