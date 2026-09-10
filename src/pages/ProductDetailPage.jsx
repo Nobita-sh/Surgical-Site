@@ -17,12 +17,21 @@ export const ProductDetailPage = () => {
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState('description');
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
-  const [selectedVariant, setSelectedVariant] = useState('Desk Stand');
   const [reviewForm, setReviewForm] = useState({ rating: 5, comment: '', name: '', email: '' });
   const [reviewSubmitted, setReviewSubmitted] = useState(false);
   const [recentlyViewed, setRecentlyViewed] = useState([]);
 
   const product = products.find(p => p.slug === slug || p.id === slug) || products[0];
+  const [selectedVariant, setSelectedVariant] = useState(product?.variants?.[0] || '');
+
+  useEffect(() => {
+    if (product?.variants && Array.isArray(product.variants) && product.variants.length > 0) {
+      setSelectedVariant(product.variants[0]);
+    } else {
+      setSelectedVariant('');
+    }
+  }, [product]);
+
   const relatedProducts = products.filter(p => p.id !== product?.id).slice(0, 5);
 
   const isFavorited = product ? isInWishlist(product.id) : false;
@@ -101,16 +110,18 @@ export const ProductDetailPage = () => {
     );
   }
 
-  const basePrice = parseFloat(product.price) || 17000;
-  const currentPrice = selectedVariant === 'Floor Stand' ? Math.round(basePrice + 1500) : Math.round(basePrice);
-  const variants = ['Desk Stand', 'Floor Stand'];
+  const basePrice = parseFloat(product.price) || 0;
+  const currentPrice = Math.round(basePrice);
+  const variants = Array.isArray(product.variants) ? product.variants : [];
 
   const handleWhatsAppOrder = () => {
+    const variantText = selectedVariant ? `\n*Option:* ${selectedVariant}` : '';
     const message = encodeURIComponent(
-      `Hello Surgicals.pk! I am interested in ordering:\n\n*Product:* ${product.name}\n*SKU:* ${product.sku || 'N/A'}\n*Price:* Rs ${currentPrice.toLocaleString()}\n*Variant:* ${selectedVariant}\n*Qty:* ${quantity}\n\nPlease confirm availability and delivery timeframe to my clinic.`
+      `Hello Surgicals.pk! I am interested in ordering:\n\n*Product:* ${product.name}\n*SKU:* ${product.sku || 'N/A'}\n*Price:* Rs ${currentPrice.toLocaleString()}${variantText}\n*Qty:* ${quantity}\n\nPlease confirm availability and delivery timeframe to my clinic.`
     );
     window.open(`https://wa.me/923037333378?text=${message}`, '_blank');
   };
+
 
   const handleReviewSubmit = (e) => {
     e.preventDefault();
@@ -386,34 +397,38 @@ export const ProductDetailPage = () => {
             )}
           </div>
 
-          {/* Variety Selector */}
-          <div className="pdp-variety-row" style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-            <span style={{ fontWeight: 700, fontSize: 13, color: '#000000', minWidth: 60 }}>Option</span>
-            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              {variants.map(v => {
-                const isSelected = selectedVariant === v;
-                return (
-                  <button
-                    key={v}
-                    type="button"
-                    onClick={() => setSelectedVariant(v)}
-                    style={{
-                      padding: '6px 14px',
-                      fontSize: 13,
-                      fontWeight: 600,
-                      border: isSelected ? '1.5px solid #800020' : '1px solid #CBD5E1',
-                      backgroundColor: isSelected ? '#FFF1F2' : '#FFFFFF',
-                      borderRadius: 6,
-                      cursor: 'pointer',
-                      color: isSelected ? '#800020' : '#334155'
-                    }}
-                  >
-                    {v}
-                  </button>
-                );
-              })}
+          {/* Variety Selector (Only rendered if product defines variants) */}
+          {variants.length > 0 && (
+            <div className="pdp-variety-row" style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+              <span style={{ fontWeight: 700, fontSize: 13, color: '#000000', minWidth: 60 }}>
+                {product.variantLabel || 'Option'}
+              </span>
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                {variants.map(v => {
+                  const isSelected = selectedVariant === v;
+                  return (
+                    <button
+                      key={v}
+                      type="button"
+                      onClick={() => setSelectedVariant(v)}
+                      style={{
+                        padding: '6px 14px',
+                        fontSize: 13,
+                        fontWeight: 600,
+                        border: isSelected ? '1.5px solid #800020' : '1px solid #CBD5E1',
+                        backgroundColor: isSelected ? '#FFF1F2' : '#FFFFFF',
+                        borderRadius: 6,
+                        cursor: 'pointer',
+                        color: isSelected ? '#800020' : '#334155'
+                      }}
+                    >
+                      {v}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Quantity & Add to Cart & Wishlist */}
           <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 14, width: '100%' }}>
@@ -438,7 +453,7 @@ export const ProductDetailPage = () => {
             />
 
             <button
-              onClick={() => addToCart({ ...product, price: currentPrice, selectedVariant }, quantity)}
+              onClick={() => addToCart({ ...product, price: currentPrice, ...(selectedVariant ? { selectedVariant } : {}) }, quantity)}
               className="btn-solid-maroon"
               style={{
                 flex: 1,
