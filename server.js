@@ -77,12 +77,15 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Start Express Server
-app.listen(PORT, () => {
-  console.log(`\nSurgicals.PK Full-Stack Platform running at: http://localhost:${PORT}`);
-  console.log(`Mode: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`Database: ${db.isDbConnected() ? 'Neon PostgreSQL' : 'Local Persistent Engine'}`);
-  console.log(`API Ready: /api/products, /api/categories, /api/orders, /api/auth\n`);
-});
+// Start Express Server (Standalone Local / Node Server)
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\nSurgicals.PK Full-Stack Platform running at: http://localhost:${PORT}`);
+    console.log(`Mode: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`Database: ${db.isDbConnected() ? 'Neon PostgreSQL' : 'Local Persistent Engine'}`);
+    console.log(`API Ready: /api/products, /api/categories, /api/orders, /api/auth\n`);
+  });
+}
+
 
 module.exports = app;
