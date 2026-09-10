@@ -1,0 +1,1540 @@
+{
+  "categories": [
+    {
+      "id": "anti-embolism",
+      "name": "Anti Embolism Stocking",
+      "slug": "anti-embolism-stocking",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Stockings"
+    },
+    {
+      "id": "autoclave-sterilizer",
+      "name": "Autoclave & Sterilizer",
+      "slug": "autoclave-sterilizer",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Sterilizer"
+    },
+    {
+      "id": "blood-pressure-monitors",
+      "name": "Blood Pressure Monitors",
+      "slug": "blood-pressure-monitors",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=BP%20Monitor"
+    },
+    {
+      "id": "cervical-collar",
+      "name": "Cervical Collar",
+      "slug": "cervical-collar",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Collar"
+    },
+    {
+      "id": "commode-chair",
+      "name": "Commode Chair",
+      "slug": "commode-chair",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Commode"
+    },
+    {
+      "id": "diagnostic-accessories",
+      "name": "Diagnostic Accessories",
+      "slug": "diagnostic-accessories",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Diagnostic"
+    },
+    {
+      "id": "disposable-items",
+      "name": "Disposable Items",
+      "slug": "disposable-items",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Disposable"
+    },
+    {
+      "id": "doctor-kits",
+      "name": "Doctor Kits",
+      "slug": "doctor-kits",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Doctor%20Kit"
+    },
+    {
+      "id": "ecg-machine",
+      "name": "ECG Machine",
+      "slug": "ecg-machine",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=ECG%20Machine"
+    },
+    {
+      "id": "electro-medical",
+      "name": "Electro Medical Equipment",
+      "slug": "electro-medical",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Electro%20Medical"
+    },
+    {
+      "id": "emergency-relief",
+      "name": "Emergency Relief",
+      "slug": "emergency-relief",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Emergency"
+    },
+    {
+      "id": "ent-equipment",
+      "name": "ENT Equipment",
+      "slug": "ent-equipment",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=ENT%20Equipment"
+    },
+    {
+      "id": "glucometer",
+      "name": "Glucometer",
+      "slug": "glucometer",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Glucometer"
+    },
+    {
+      "id": "gynae-instruments",
+      "name": "Gynae Instruments",
+      "slug": "gynae-instruments",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Gynae"
+    },
+    {
+      "id": "hospital-furniture",
+      "name": "Hospital Furniture",
+      "slug": "hospital-furniture",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Furniture"
+    },
+    {
+      "id": "knee-support",
+      "name": "Knee Support",
+      "slug": "knee-support",
+      "image": "https://placehold.co/200x200/f8f6f6/333333?text=Knee%20Support"
+    }
+  ],
+  "products": [
+    {
+      "id": "SPK-8655",
+      "slug": "test-clinical-stethoscope-classic-iii",
+      "name": "Test Clinical Stethoscope Classic III",
+      "categoryId": "diagnostic-accessories",
+      "categoryName": "General Equipment",
+      "price": 14500,
+      "originalPrice": null,
+      "onSale": false,
+      "stock": 25,
+      "sku": "SKU-174",
+      "image": "https://placehold.co/400x400/fafafa/000000?text=Test%20Clinical%20Stethoscope%20Classic%20III",
+      "shortDescription": "",
+      "description": "",
+      "specifications": {},
+      "certifications": [
+        "ISO 13485 Medical Grade"
+      ],
+      "rating": 5,
+      "reviewCount": 1,
+      "featured": false,
+      "bestSeller": false,
+      "createdAt": "2026-09-01T04:53:03.750Z"
+    },
+    {
+      "id": "SPK-1001",
+      "name": "Ultrasonic Therapy Machine for Physiotherapy",
+      "slug": "ultrasonic-therapy-machine-physiotherapy",
+      "categoryId": "electro-medical",
+      "categoryName": "Electro Medical",
+      "price": 44500,
+      "originalPrice": 46000,
+      "onSale": true,
+      "stock": 11,
+      "sku": "PHY-ULT-01",
+      "rating": 4.9,
+      "reviewCount": 42,
+      "featured": true,
+      "bestSeller": true,
+      "image": "/assets/products/ultrasonic-therapy.png",
+      "shortDescription": "Professional clinical ultrasonic physiotherapy unit for deep muscle recovery and joint pain relief.",
+      "description": "Concentrated deep-penetrating ultrasonic waves (1MHz / 3MHz) with built-in digital timer and probe transducer.",
+      "specifications": {
+        "Frequency": "1.0 MHz",
+        "Max Power": "15 Watts",
+        "Power Supply": "AC 220V / 50Hz"
+      },
+      "certifications": [
+        "ISO 13485 Medical Grade",
+        "CE Certified"
+      ]
+    },
+    {
+      "id": "SPK-1002",
+      "name": "Digital Ultrasonic Diagnostic Imaging System DP-10",
+      "slug": "digital-ultrasonic-diagnostic-imaging-system-dp-10",
+      "categoryId": "diagnostic-accessories",
+      "categoryName": "Diagnostic Accessories",
+      "price": 570000,
+      "originalPrice": 575000,
+      "onSale": true,
+      "stock": 4,
+      "sku": "IMG-DP10-02",
+      "rating": 5,
+      "reviewCount": 18,
+      "featured": true,
+      "bestSeller": true,
+      "image": "/assets/products/dp10-ultrasound.png",
+      "shortDescription": "Mindray DP-10 digital B/W ultrasound system with high-resolution LED monitor.",
+      "description": "Equipped with a 12.1-inch tiltable LED screen, full digital beam-forming technology, and dual transducer ports.",
+      "specifications": {
+        "Display": "12.1-inch LED",
+        "Weight": "5.5 kg",
+        "Storage": "500 GB HDD"
+      },
+      "certifications": [
+        "FDA Approved",
+        "CE 0123",
+        "ISO 13485"
+      ]
+    },
+    {
+      "id": "SPK-1003",
+      "name": "Electric Wheel Chair for Heavy Duty X-Large",
+      "slug": "electric-wheel-chair-heavy-duty-x-large",
+      "categoryId": "commode-chair",
+      "categoryName": "Rehabilitation & Mobility",
+      "price": 195000,
+      "originalPrice": 200000,
+      "onSale": true,
+      "stock": 6,
+      "sku": "RBL-WCH-XL03",
+      "rating": 4.8,
+      "reviewCount": 29,
+      "featured": true,
+      "bestSeller": true,
+      "image": "/assets/products/wheelchair.png",
+      "shortDescription": "Motorized heavy-duty power wheelchair with 360-degree intelligent joystick and electromagnetic brakes.",
+      "description": "Reinforced aerospace-grade aluminum alloy frame with wide padded seat, flip-up armrests, and 24V lithium battery.",
+      "specifications": {
+        "Motor": "Dual 250W Brushless",
+        "Range": "~25 km",
+        "Capacity": "150 kg"
+      },
+      "certifications": [
+        "CE Certified",
+        "ISO 7176"
+      ]
+    },
+    {
+      "id": "SPK-1004",
+      "name": "Standard Commode Wheelchair Chrome Plated",
+      "slug": "standard-commode-wheelchair-chrome-plated",
+      "categoryId": "commode-chair",
+      "categoryName": "Commode Chair",
+      "price": 18500,
+      "originalPrice": 19500,
+      "onSale": true,
+      "stock": 22,
+      "sku": "CMD-WCH-04",
+      "rating": 4.7,
+      "reviewCount": 35,
+      "featured": false,
+      "bestSeller": true,
+      "image": "/assets/products/commode-chair.png",
+      "shortDescription": "Multi-functional patient commode chair with integrated waste bucket and heavy-duty wheels.",
+      "description": "Chrome plated steel structure, water-resistant vinyl seat cushion, removable toilet pan, and foot brakes.",
+      "specifications": {
+        "Material": "Chrome Steel",
+        "Weight Capacity": "120 kg"
+      },
+      "certifications": [
+        "ISO 9001"
+      ]
+    },
+    {
+      "id": "SPK-1005",
+      "name": "Digital Upper Arm Blood Pressure Monitor M2 Basic",
+      "slug": "digital-upper-arm-blood-pressure-monitor-m2-basic",
+      "categoryId": "blood-pressure-monitors",
+      "categoryName": "Blood Pressure Monitors",
+      "price": 8900,
+      "originalPrice": 9500,
+      "onSale": true,
+      "stock": 45,
+      "sku": "BPM-M2-05",
+      "rating": 4.9,
+      "reviewCount": 88,
+      "featured": true,
+      "bestSeller": true,
+      "image": "/assets/products/bp-monitor.png",
+      "shortDescription": "Automatic digital arm blood pressure monitor with Intellisense technology and hypertension indicator.",
+      "description": "Clinically validated accurate oscillometric measurement with comfortable wide cuff (22-32 cm) and memory recall.",
+      "specifications": {
+        "Measurement": "Oscillometric",
+        "Accuracy": "Pressure ±3 mmHg"
+      },
+      "certifications": [
+        "CE Certified",
+        "AAMI Clinically Validated"
+      ]
+    },
+    {
+      "id": "SPK-1006",
+      "name": "Hospital ICU Patient Monitor 6-Parameter Vital Signs",
+      "slug": "hospital-icu-patient-monitor-6-parameter-vital-signs",
+      "categoryId": "electro-medical",
+      "categoryName": "Electro Medical Equipment",
+      "price": 145000,
+      "originalPrice": 155000,
+      "onSale": true,
+      "stock": 6,
+      "sku": "MON-ICU-06",
+      "rating": 5,
+      "reviewCount": 12,
+      "featured": true,
+      "bestSeller": false,
+      "image": "/assets/products/icu-monitor.png",
+      "shortDescription": "Multi-parameter bedside vital signs monitor for ECG, NIBP, SpO2, Resp, Temp, and Pulse.",
+      "description": "12.1-inch color TFT display with multi-lead ECG waveform review, visual and audible multi-level alarms, and rechargeable lithium battery.",
+      "specifications": {
+        "Parameters": "ECG, SpO2, NIBP, RESP, 2-TEMP, PR",
+        "Display": "12.1 inch TFT"
+      },
+      "certifications": [
+        "CE Certified",
+        "ISO 13485 Medical"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "USR-1001",
+      "name": "Dr. Muhammad Tariq",
+      "email": "doctor@surgicals.pk",
+      "phone": "0300-1234567",
+      "password": "$2b$10$ARN.asM1JunCMvFNC14E0O9/bUm0E0vm9UjXUCQKNsVq1dLXZnTda",
+      "role": "doctor",
+      "hospitalClinicName": "National Hospital Lahore",
+      "city": "Lahore",
+      "createdAt": "2026-09-01T04:53:03.536Z",
+      "password_hash": "$2b$10$ARN.asM1JunCMvFNC14E0O9/bUm0E0vm9UjXUCQKNsVq1dLXZnTda"
+    },
+    {
+      "id": "USR-1002",
+      "name": "Admin Procurement Desk",
+      "email": "admin@surgicals.pk",
+      "phone": "0303-7333378",
+      "password": "$2b$10$S3aCHbMUNF5qqkajisIpVOE4ZoakmCHKATnlx17.FQhlEhiT.7i0G",
+      "role": "admin",
+      "hospitalClinicName": "Surgicals.PK Operations",
+      "city": "Lahore",
+      "createdAt": "2026-09-01T04:53:03.539Z",
+      "password_hash": "$2b$10$S3aCHbMUNF5qqkajisIpVOE4ZoakmCHKATnlx17.FQhlEhiT.7i0G"
+    },
+    {
+      "id": "USR-6798",
+      "name": "Dr. Test Physician",
+      "email": "dr_test_1788238383756@surgicals.pk",
+      "phone": "",
+      "password": "password123",
+      "role": "doctor",
+      "hospitalClinicName": "",
+      "city": "Islamabad",
+      "createdAt": "2026-09-01T04:53:03.762Z"
+    },
+    {
+      "id": "USR-ADMIN-ROOT",
+      "name": "MR_xyz Executive Admin",
+      "email": "MR_xyz@surigical.com",
+      "phone": "0300-0000000",
+      "password": "$2b$10$T5vkj3uXQwAqE4gcy04i/uDIwcovGGrmTTMlH/rRguUubI1fnmEQi",
+      "role": "admin",
+      "hospitalClinicName": "Surgicals.PK Executive HQ",
+      "city": "Lahore",
+      "createdAt": "2026-09-01T10:27:59.779Z",
+      "password_hash": "$2b$10$T5vkj3uXQwAqE4gcy04i/uDIwcovGGrmTTMlH/rRguUubI1fnmEQi"
+    },
+    {
+      "id": "USR-5182",
+      "name": "Dr. Ayesha Tariq",
+      "email": "doctor_1788334063517@hospital.pk",
+      "phone": "",
+      "password": "$2b$10$f1gniW/mzcPmW7woBzzXu.QGce2OZloPAxyfFqV5l7n7d0eF0cQrW",
+      "role": "customer",
+      "hospitalClinicName": "",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:27:43.874Z"
+    },
+    {
+      "id": "USR-2925",
+      "name": "Dr. Ayesha Tariq",
+      "email": "doctor_1788334175343@hospital.pk",
+      "phone": "",
+      "password": "$2b$10$aksg3JE9Mq2lABT1DxzD6uaC1pHjpH82EryEu6D6ToynMDnXhMxlm",
+      "role": "customer",
+      "hospitalClinicName": "",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:29:35.691Z"
+    },
+    {
+      "id": "USR-9573",
+      "name": "Hamza Courier",
+      "email": "courier_1788334988864@surgicals.pk",
+      "phone": "0301-5555555",
+      "password": "$2b$10$r4X3JAQg9rOTYEuhfSryIusmXaUodn27/9AUcT/vX6xLJ92.cfEDG",
+      "password_hash": "$2b$10$r4X3JAQg9rOTYEuhfSryIusmXaUodn27/9AUcT/vX6xLJ92.cfEDG",
+      "role": "staff",
+      "permissions": [
+        "delivery"
+      ],
+      "status": "inactive",
+      "hospitalClinicName": "Surgicals.PK Operations",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:43:09.420Z"
+    },
+    {
+      "id": "USR-6605",
+      "name": "Hamza Delivery Rider",
+      "email": "courier_1788335186066@surgicals.pk",
+      "phone": "0301-9998888",
+      "password": "$2b$10$uENUeGWkv7aZVE/wbTI2Zu0GWpfu/8sNDyhxfuiCsktsghUNY6b/K",
+      "password_hash": "$2b$10$uENUeGWkv7aZVE/wbTI2Zu0GWpfu/8sNDyhxfuiCsktsghUNY6b/K",
+      "role": "staff",
+      "permissions": [
+        "delivery"
+      ],
+      "status": "inactive",
+      "hospitalClinicName": "Surgicals.PK Operations",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:46:27.055Z"
+    },
+    {
+      "id": "USR-2227",
+      "name": "Tariq Orders Officer",
+      "email": "ops_1788335528123@surgicals.pk",
+      "phone": "0300-1112233",
+      "password": "$2b$10$6B3RE8XY.BrWNxddCCsqM./yGIXMgXLEXojp5f3WLdIPQcfb5DS2i",
+      "password_hash": "$2b$10$6B3RE8XY.BrWNxddCCsqM./yGIXMgXLEXojp5f3WLdIPQcfb5DS2i",
+      "role": "staff",
+      "permissions": [
+        "orders",
+        "support"
+      ],
+      "status": "active",
+      "hospitalClinicName": "Surgicals.PK Operations",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:52:09.151Z"
+    },
+    {
+      "id": "USR-5580",
+      "name": "Bilal Courier Rider",
+      "email": "rider_1788335531303@surgicals.pk",
+      "phone": "0321-4445555",
+      "password": "$2b$10$RnujzHGSOLq/WM1PrbHwd.6fSoNGRwun4jwDHb78izwYYO/0DXATm",
+      "password_hash": "$2b$10$RnujzHGSOLq/WM1PrbHwd.6fSoNGRwun4jwDHb78izwYYO/0DXATm",
+      "role": "staff",
+      "permissions": [
+        "delivery"
+      ],
+      "status": "inactive",
+      "hospitalClinicName": "Surgicals.PK Operations",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:52:12.430Z"
+    },
+    {
+      "id": "USR-9004",
+      "name": "Regular Staff",
+      "email": "regstaff_1788335780363@surgicals.pk",
+      "phone": "",
+      "password": "$2b$10$ft/iMHPP3HxLaalndvPAzeYzqrPzx3xt.AxHibJNNLBlfib4i0lmW",
+      "password_hash": "$2b$10$ft/iMHPP3HxLaalndvPAzeYzqrPzx3xt.AxHibJNNLBlfib4i0lmW",
+      "role": "staff",
+      "permissions": [
+        "orders"
+      ],
+      "status": "active",
+      "hospitalClinicName": "Surgicals.PK Operations",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:56:21.298Z"
+    },
+    {
+      "id": "USR-2656",
+      "name": "Legit Staff Member",
+      "email": "legit_1788335782521@surgicals.pk",
+      "phone": "",
+      "password": "$2b$10$ELfSPifMJJcqkDAhCK65hO1ZdF6lJb0G6QHHxf9OfJIQQD4i0XfYq",
+      "password_hash": "$2b$10$ELfSPifMJJcqkDAhCK65hO1ZdF6lJb0G6QHHxf9OfJIQQD4i0XfYq",
+      "role": "staff",
+      "permissions": [
+        "orders"
+      ],
+      "status": "active",
+      "hospitalClinicName": "Surgicals.PK Operations",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:56:23.482Z"
+    },
+    {
+      "id": "USR-4503",
+      "name": "Aslam Rider",
+      "email": "rider_cod_1788335964793@surgicals.pk",
+      "phone": "",
+      "password": "$2b$10$visj3mrVEL3tkdycWnMJYOwxdQhzn6OBMmh/BFJLVt/LDnhlGzlvm",
+      "password_hash": "$2b$10$visj3mrVEL3tkdycWnMJYOwxdQhzn6OBMmh/BFJLVt/LDnhlGzlvm",
+      "role": "staff",
+      "permissions": [
+        "delivery"
+      ],
+      "status": "active",
+      "hospitalClinicName": "Surgicals.PK Operations",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T07:59:25.995Z"
+    },
+    {
+      "id": "USR-9149",
+      "name": "Secondary Admin",
+      "email": "admin2_1788336404907@surgicals.pk",
+      "phone": "",
+      "password": "$2b$10$5eZrl.sA7nkIIVIsF/iNo.8gpw2w2hTLdC0QMa.ERXFkDLatGiNma",
+      "password_hash": "$2b$10$5eZrl.sA7nkIIVIsF/iNo.8gpw2w2hTLdC0QMa.ERXFkDLatGiNma",
+      "role": "admin",
+      "permissions": [],
+      "status": "inactive",
+      "hospitalClinicName": "",
+      "city": "Lahore",
+      "createdAt": "2026-09-02T08:06:45.396Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-51247",
+      "customerName": "Dr. Shahbaz COD Test",
+      "customerPhone": "0300-7776655",
+      "customerEmail": "",
+      "deliveryAddress": "Clinic 12, Jail Road",
+      "city": "Lahore",
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "orderStatus": "Delivered",
+      "courierName": "Aslam Rider",
+      "trackingNumber": "DW-7864962",
+      "subtotal": 44500,
+      "shippingFee": 0,
+      "discount": 0,
+      "couponCode": null,
+      "total": 44500,
+      "items": [
+        {
+          "id": "SPK-1001",
+          "name": "Ultrasonic Therapy Machine for Physiotherapy",
+          "price": 44500,
+          "quantity": 1
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-09-02T07:59:23.692Z",
+      "assignedCourierId": "USR-4503",
+      "assignedCourierName": "Aslam Rider",
+      "deliveryNotes": "Handed over box to reception"
+    },
+    {
+      "id": "ORD-29761",
+      "customerName": "Stock Check Buyer",
+      "customerPhone": "03009876543",
+      "customerEmail": "",
+      "deliveryAddress": "Model Town, Lahore",
+      "city": "Lahore",
+      "paymentMethod": "cod",
+      "paymentStatus": "Paid (Cash Collected by Courier)",
+      "orderStatus": "Delivered",
+      "courierName": "Bilal Courier Rider",
+      "trackingNumber": "DW-9360558",
+      "subtotal": 390000,
+      "shippingFee": 0,
+      "discount": 0,
+      "couponCode": null,
+      "total": 390000,
+      "items": [
+        {
+          "id": "SPK-1003",
+          "name": "Electric Wheel Chair for Heavy Duty X-Large",
+          "price": 195000,
+          "quantity": 2
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-09-02T07:29:40.053Z",
+      "assignedCourierId": "USR-5580",
+      "assignedCourierName": "Bilal Courier Rider",
+      "deliveryNotes": "Handed over directly to clinic in-charge",
+      "supportNotes": [
+        {
+          "author": "ops_1788335528123@surgicals.pk",
+          "note": "Inquiry resolved: Delivery verified by reception",
+          "timestamp": "2026-09-02T07:52:18.491Z"
+        },
+        {
+          "note": "Customer verified address via phone call",
+          "author": "admin@surgicals.pk",
+          "timestamp": "2026-09-02T07:46:32.727Z"
+        }
+      ]
+    },
+    {
+      "id": "ORD-74499",
+      "customerName": "Voucher Buyer",
+      "customerPhone": "03001234567",
+      "customerEmail": "",
+      "deliveryAddress": "DHA Phase 5, Lahore",
+      "city": "Lahore",
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "orderStatus": "Delivered",
+      "courierName": "Daewoo Fastex Express",
+      "trackingNumber": "DW-3739201",
+      "subtotal": 44500,
+      "shippingFee": 0,
+      "discount": 500,
+      "couponCode": "FIRSTAID",
+      "total": 44000,
+      "items": [
+        {
+          "id": "SPK-1001",
+          "name": "Ultrasonic Therapy Machine for Physiotherapy",
+          "price": 44500,
+          "quantity": 1
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-09-02T07:29:38.378Z",
+      "deliveryNotes": ""
+    },
+    {
+      "id": "ORD-64636",
+      "customerName": "Test Tampering Buyer",
+      "customerPhone": "03001234567",
+      "customerEmail": "",
+      "deliveryAddress": "Clinic 4, Jail Road, Lahore",
+      "city": "Lahore",
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "orderStatus": "Processing Order",
+      "courierName": "Daewoo Fastex Express",
+      "trackingNumber": "DW-9263804",
+      "subtotal": 44500,
+      "shippingFee": 0,
+      "discount": 0,
+      "couponCode": null,
+      "total": 44500,
+      "items": [
+        {
+          "id": "SPK-1001",
+          "name": "Ultrasonic Therapy Machine for Physiotherapy",
+          "price": 44500,
+          "quantity": 1
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-09-02T07:29:36.570Z"
+    },
+    {
+      "id": "ORD-32091",
+      "customerName": "Clinical QA Test",
+      "customerPhone": "03001234567",
+      "customerEmail": "qa@surgicals.pk",
+      "deliveryAddress": "Suite 402, Doctors Plaza, Jail Road, Lahore",
+      "city": "Lahore",
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "orderStatus": "Dispatched with Courier",
+      "courierName": "Daewoo Fastex Express",
+      "trackingNumber": "DW-9026648",
+      "subtotal": 145000,
+      "shippingFee": 0,
+      "total": 145000,
+      "items": [
+        {
+          "id": "SPK-1001",
+          "name": "ICU Patient Monitor Multi-Parameter",
+          "price": 145000,
+          "quantity": 1
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-09-02T05:36:17.233Z"
+    },
+    {
+      "id": "ORD-97496",
+      "customerName": "Checking",
+      "customerPhone": "23232",
+      "customerEmail": "ethicalhac07@gmail.com",
+      "deliveryAddress": "Hehehehe",
+      "city": "Lahore",
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "orderStatus": "Processing Order",
+      "courierName": "Daewoo Fastex Express",
+      "trackingNumber": "DW-9445191",
+      "subtotal": 27400,
+      "shippingFee": 0,
+      "total": 27400,
+      "items": [
+        {
+          "id": "SPK-1004",
+          "name": "Standard Commode Wheelchair Chrome Plated",
+          "price": "18500.00",
+          "quantity": 1
+        },
+        {
+          "id": "SPK-1005",
+          "name": "Digital Upper Arm Blood Pressure Monitor M2 Basic",
+          "price": "8900.00",
+          "quantity": 1
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-09-01T10:15:46.673Z"
+    },
+    {
+      "id": "ORD-60170",
+      "customerName": "Dr. Test Physician",
+      "customerPhone": "0300-9876543",
+      "customerEmail": "",
+      "deliveryAddress": "Clinic 12, Blue Area, Islamabad",
+      "city": "Islamabad",
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "orderStatus": "Dispatched via Daewoo Fastex",
+      "courierName": "Daewoo Fastex Express",
+      "trackingNumber": "DW-3543198",
+      "subtotal": 14500,
+      "shippingFee": 0,
+      "total": 14500,
+      "items": [
+        {
+          "id": "SPK-8655",
+          "name": "Test Clinical Stethoscope Classic III",
+          "price": 14500,
+          "quantity": 1
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-09-01T04:53:03.778Z"
+    },
+    {
+      "id": "ORD-98421",
+      "customerName": "Dr. Muhammad Tariq",
+      "customerPhone": "0300-1234567",
+      "customerEmail": "doctor@surgicals.pk",
+      "deliveryAddress": "Suite 402, Doctors Medical Chambers, Jail Road",
+      "city": "Lahore",
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "orderStatus": "Out for Delivery",
+      "trackingNumber": "DW-7829104",
+      "courierName": "Hamza Courier",
+      "subtotal": 44500,
+      "shippingFee": 0,
+      "total": 44500,
+      "items": [
+        {
+          "id": "SPK-1001",
+          "name": "Ultrasonic Therapy Machine for Physiotherapy",
+          "price": 44500,
+          "quantity": 1,
+          "image": "https://placehold.co/400x400/fafafa/000000?text=Ultrasound%20Therapy"
+        }
+      ],
+      "createdAt": "2026-08-30T04:53:03.539Z",
+      "assignedCourierId": "USR-9573",
+      "assignedCourierName": "Hamza Courier",
+      "deliveryNotes": "Dispatched on courier bike 4",
+      "supportNotes": [
+        {
+          "author": "admin@surgicals.pk",
+          "note": "Customer requested calling before arrival at Jail Road",
+          "timestamp": "2026-09-02T07:43:15.062Z"
+        }
+      ]
+    }
+  ],
+  "brands": [
+    {
+      "id": "b1",
+      "name": "Omron Healthcare",
+      "country": "Japan",
+      "status": "Authorized Partner",
+      "logo": "/assets/brands/omron.svg",
+      "active": true
+    },
+    {
+      "id": "b2",
+      "name": "Beurer Medical",
+      "country": "Germany",
+      "status": "Official Distributor",
+      "logo": "/assets/brands/beurer.svg",
+      "active": true
+    },
+    {
+      "id": "b3",
+      "name": "Certeza Medical",
+      "country": "Germany",
+      "status": "Authorized Partner",
+      "logo": "/assets/brands/certeza.svg",
+      "active": true
+    },
+    {
+      "id": "b4",
+      "name": "OppO Orthopedics",
+      "country": "USA",
+      "status": "Direct Importer",
+      "logo": "/assets/brands/oppo.svg",
+      "active": true
+    },
+    {
+      "id": "b5",
+      "name": "Tanita Corporation",
+      "country": "Japan",
+      "status": "Official Distributor",
+      "logo": "/assets/brands/tanita.svg",
+      "active": true
+    },
+    {
+      "id": "b6",
+      "name": "Mindray Biomedical",
+      "country": "Global",
+      "status": "Clinical Partner",
+      "logo": "/assets/brands/mindray.svg",
+      "active": true
+    },
+    {
+      "id": "b7",
+      "name": "Citizen Systems",
+      "country": "Japan",
+      "status": "Authorized Partner",
+      "logo": "/assets/brands/citizen.svg",
+      "active": true
+    },
+    {
+      "id": "b8",
+      "name": "Besmed Health",
+      "country": "Taiwan",
+      "status": "Authorized Partner",
+      "logo": "/assets/brands/besmed.svg",
+      "active": true
+    },
+    {
+      "id": "b9",
+      "name": "Believia Diagnostics",
+      "country": "UK",
+      "status": "Official Distributor",
+      "logo": "/assets/brands/believia.svg",
+      "active": true
+    }
+  ],
+  "homepageSections": [
+    {
+      "id": "categories",
+      "name": "Most Selling Categories Hub",
+      "active": true,
+      "desc": "Interactive category slider with real equipment photography",
+      "content": {
+        "title": "MOST SELLING CATEGORIES",
+        "subtitle": "Browse certified hospital and clinical equipment"
+      }
+    },
+    {
+      "id": "belts",
+      "name": "Unisex Body Belts & Rehabilitation",
+      "active": true,
+      "desc": "Orthopedic braces and rehabilitation support showcase",
+      "content": {
+        "title": "UNISEX BODY BELT & BRACES",
+        "viewAllText": "View All",
+        "viewAllLink": "/category/knee-support"
+      }
+    },
+    {
+      "id": "promo-3col",
+      "name": "3-Column Promotional Banners",
+      "active": true,
+      "desc": "Feature cards highlighting Wheelchairs, Commode Chairs, and Walkers",
+      "content": {
+        "card1Title": "Wheel Chair",
+        "card1Link": "/category/commode-chair",
+        "card1Image": "/assets/banners/wheelchair.png",
+        "card2Title": "Commode-Chairs",
+        "card2Link": "/category/commode-chair",
+        "card2Image": "/assets/banners/commode-chair.png",
+        "card3Title": "Walkers",
+        "card3Link": "/category/commode-chair",
+        "card3Image": "/assets/banners/walker.png"
+      }
+    },
+    {
+      "id": "promo-split",
+      "name": "2-Column Split Promotional Banners",
+      "active": true,
+      "desc": "Special items on sale and latest medical equipment split cards",
+      "content": {
+        "splitLeftTitle": "Items on Sale",
+        "splitLeftDiscount": "Up to 25% Off",
+        "splitLeftLink": "/shop",
+        "splitRightTitle": "Latest Medical Equipment",
+        "splitRightDiscount": "New Arrivals",
+        "splitRightLink": "/shop"
+      }
+    },
+    {
+      "id": "brands",
+      "name": "Official Brand Partners",
+      "active": true,
+      "desc": "Swipeable brand logo showcase (Omron, Beurer, Certeza, Tanita)",
+      "content": {
+        "title": "OFFICIAL MEDICAL BRAND PARTNERS"
+      }
+    },
+    {
+      "id": "hero",
+      "name": "Hero Showcase Banner",
+      "active": true,
+      "desc": "Main promotional hero banner with headline, subtext, and call-to-action buttons",
+      "content": {
+        "tagline": "Online Surgical Equipment store in Pakistan",
+        "title": "Boost Your Health with Surgicals.pk",
+        "subtext": "Shop hospital-grade surgical items, medical furniture, diagnostic devices, and mobility aids with 100% genuine warranty & nationwide delivery.",
+        "primaryBtnText": "SHOP NOW",
+        "primaryBtnLink": "/shop",
+        "whatsappBtnText": "ORDER ON WHATSAPP",
+        "whatsappNumber": "923037333378"
+      }
+    },
+    {
+      "id": "best-sellers",
+      "name": "Best Selling Products Grid",
+      "active": true,
+      "desc": "5-column product catalog showcase with quick cart triggers",
+      "content": {
+        "title": "BEST SELLING PRODUCTS",
+        "subtitle": "Top demanded clinical tools and home healthcare items",
+        "itemLimit": 10
+      }
+    },
+    {
+      "id": "story",
+      "name": "Medical Authority & Brand Story",
+      "active": true,
+      "desc": "Narrative SEO story detailing Surgicals.pk clinical authority and reliability",
+      "content": {
+        "heading": "Leading Surgical & Medical Equipment Supplier in Pakistan",
+        "paragraph1": "Welcome to Surgicals pk. We are the proud supplier of physiotherapy machines and related instruments to clinics, hospitals, and home users across Pakistan. Whether you are looking for equipment like body massagers and heating pads, or a professional looking to upgrade your facility with advanced exercise machines, we have got you covered.",
+        "paragraph2": "Now you can save on the best physiotherapy machines for clinical and home use. Scroll our verified catalog of modern physical therapy modalities engineered to assist rapid patient rehabilitation and recovery.",
+        "paragraph3": "We are envisioned to remain Pakistan's most trusted medical supply partner with DRAP compliance, genuine manufacturer warranties, and dedicated biomedical after-sales support."
+      }
+    }
+  ],
+  "promos": {
+    "announcementText": "Free Express Delivery on orders above Rs 5,000 across Lahore & Nationwide Dispatch via TCS / Daewoo Fastex",
+    "vouchers": [
+      {
+        "code": "SURGICAL10",
+        "discount": "10% OFF",
+        "type": "Percentage",
+        "minOrder": 3000,
+        "status": "Active"
+      },
+      {
+        "code": "HOSPITAL15",
+        "discount": "15% OFF",
+        "type": "Institutional",
+        "minOrder": 50000,
+        "status": "Active"
+      },
+      {
+        "code": "FIRSTAID",
+        "discount": "Rs 500 OFF",
+        "type": "Fixed",
+        "minOrder": 2500,
+        "status": "Active"
+      }
+    ]
+  },
+  "policyData": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "effectiveDate": "January 1, 2025",
+      "supportEmail": "privacy@surgicals.pk",
+      "dpoOfficer": "Compliance & Clinical Records Officer",
+      "retentionYears": "7 Years (DRAP Clinical Standard)"
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "effectiveDate": "January 1, 2025",
+      "jurisdiction": "Lahore, Punjab, Pakistan",
+      "advancePaymentThreshold": "Rs. 50,000 (Machinery & Ultrasound Units)",
+      "warrantyPeriod": "1 to 3 Years Official Manufacturer Warranty"
+    },
+    "returns": {
+      "title": "Return, Refund & Warranty Policy",
+      "guaranteeDays": "7 Days Inspection Period",
+      "claimsHelpline": "+92 300 0000000",
+      "payoutMethods": "Direct IBAN Bank Transfer, EasyPaisa, JazzCash",
+      "pickupCourier": "TCS Express / Leopards Courier"
+    }
+  },
+  "auditLogs": [
+    {
+      "id": "LOG-1788861131404",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "198.51.100.186",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-08T09:52:11.407Z"
+    },
+    {
+      "id": "LOG-1788855659122",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "203.0.113.54",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-08T08:20:59.122Z"
+    },
+    {
+      "id": "LOG-1788854737401",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "203.0.113.29",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-08T08:05:37.401Z"
+    },
+    {
+      "id": "LOG-1788854516877",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "203.0.113.88",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-08T08:01:56.877Z"
+    },
+    {
+      "id": "LOG-1788854368960",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "203.0.113.101",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-08T07:59:28.961Z"
+    },
+    {
+      "id": "LOG-1788850972383",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "203.0.113.148",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-08T07:02:52.383Z"
+    },
+    {
+      "id": "LOG-1788850055328",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "::ffff:127.0.0.1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-08T06:47:35.328Z"
+    },
+    {
+      "id": "LOG-1788770873111",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-07T08:47:53.111Z"
+    },
+    {
+      "id": "LOG-1788770866270",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-07T08:47:46.270Z"
+    },
+    {
+      "id": "LOG-1788770242628",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "127.0.0.1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-07T08:37:22.628Z"
+    },
+    {
+      "id": "LOG-1788769601930",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-07T08:26:41.930Z"
+    },
+    {
+      "id": "LOG-1788767212144",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "192.168.1.50",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-07T07:46:52.144Z"
+    },
+    {
+      "id": "LOG-1788766409918",
+      "action": "User Authenticated",
+      "actor": "doctor@surgicals.pk",
+      "origin": "127.0.0.1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-07T07:33:29.918Z"
+    },
+    {
+      "id": "LOG-1788422279520",
+      "action": "Promotional Banners & Vouchers Updated",
+      "actor": "Admin",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-03T07:57:59.520Z"
+    },
+    {
+      "id": "LOG-1788422212186",
+      "action": "Homepage Section Layout Updated",
+      "actor": "Admin",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-03T07:56:52.186Z"
+    },
+    {
+      "id": "LOG-1788422163508",
+      "action": "Delivery Status: Order ORD-74499 → Delivered",
+      "actor": "mr_xyz@surigical.com",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-03T07:56:03.508Z"
+    },
+    {
+      "id": "LOG-1788422026631",
+      "action": "User Authenticated",
+      "actor": "mr_xyz@surigical.com",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-03T07:53:46.631Z"
+    },
+    {
+      "id": "LOG-1788336406453",
+      "action": "User Authenticated",
+      "actor": "admin2_1788336404907@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T08:06:46.453Z"
+    },
+    {
+      "id": "LOG-1788336404870",
+      "action": "User Authenticated",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T08:06:44.870Z"
+    },
+    {
+      "id": "LOG-1788335968726",
+      "action": "Delivery Status: Order ORD-51247 → Delivered",
+      "actor": "rider_cod_1788335964793@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Note: Handed over box to reception",
+      "timestamp": "2026-09-02T07:59:28.726Z"
+    },
+    {
+      "id": "LOG-1788335967847",
+      "action": "User Authenticated",
+      "actor": "rider_cod_1788335964793@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:59:27.847Z"
+    },
+    {
+      "id": "LOG-1788335967197",
+      "action": "Order ORD-51247 Assigned to Courier: Aslam Rider (USR-4503)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"trackingNumber\":\"DW-7864962\"}",
+      "timestamp": "2026-09-02T07:59:27.197Z"
+    },
+    {
+      "id": "LOG-1788335966269",
+      "action": "Staff Account Created: Aslam Rider (rider_cod_1788335964793@surgicals.pk)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"permissions\":[\"delivery\"]}",
+      "timestamp": "2026-09-02T07:59:26.269Z"
+    },
+    {
+      "id": "LOG-1788335963266",
+      "action": "User Authenticated",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:59:23.266Z"
+    },
+    {
+      "id": "LOG-1788335783752",
+      "action": "Staff Account Created: Legit Staff Member (legit_1788335782521@surgicals.pk)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"permissions\":[\"orders\"]}",
+      "timestamp": "2026-09-02T07:56:23.752Z"
+    },
+    {
+      "id": "LOG-1788335782230",
+      "action": "User Authenticated",
+      "actor": "regstaff_1788335780363@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:56:22.230Z"
+    },
+    {
+      "id": "LOG-1788335781579",
+      "action": "Staff Account Created: Regular Staff (regstaff_1788335780363@surgicals.pk)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"permissions\":[\"orders\"]}",
+      "timestamp": "2026-09-02T07:56:21.579Z"
+    },
+    {
+      "id": "LOG-1788335780366",
+      "action": "User Authenticated",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:56:20.366Z"
+    },
+    {
+      "id": "LOG-1788335539605",
+      "action": "Staff Account Deactivated: rider_1788335531303@surgicals.pk",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Status set to inactive",
+      "timestamp": "2026-09-02T07:52:19.605Z"
+    },
+    {
+      "id": "LOG-1788335538774",
+      "action": "Support Note Appended to Order ORD-29761",
+      "actor": "ops_1788335528123@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Inquiry resolved: Delivery verified by reception",
+      "timestamp": "2026-09-02T07:52:18.774Z"
+    },
+    {
+      "id": "LOG-1788335537944",
+      "action": "Delivery Status: Order ORD-29761 → Delivered",
+      "actor": "rider_1788335531303@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Note: Handed over directly to clinic in-charge",
+      "timestamp": "2026-09-02T07:52:17.944Z"
+    },
+    {
+      "id": "LOG-1788335535536",
+      "action": "Order ORD-29761 Assigned to Courier: Bilal Courier Rider (USR-5580)",
+      "actor": "ops_1788335528123@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"trackingNumber\":\"DW-9360558\"}",
+      "timestamp": "2026-09-02T07:52:15.536Z"
+    },
+    {
+      "id": "LOG-1788335533425",
+      "action": "User Authenticated",
+      "actor": "rider_1788335531303@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:52:13.425Z"
+    },
+    {
+      "id": "LOG-1788335532686",
+      "action": "Staff Account Created: Bilal Courier Rider (rider_1788335531303@surgicals.pk)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"permissions\":[\"delivery\"]}",
+      "timestamp": "2026-09-02T07:52:12.686Z"
+    },
+    {
+      "id": "LOG-1788335530164",
+      "action": "User Authenticated",
+      "actor": "ops_1788335528123@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:52:10.164Z"
+    },
+    {
+      "id": "LOG-1788335529493",
+      "action": "Staff Account Created: Tariq Orders Officer (ops_1788335528123@surgicals.pk)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"permissions\":[\"orders\",\"support\"]}",
+      "timestamp": "2026-09-02T07:52:09.493Z"
+    },
+    {
+      "id": "LOG-1788335527235",
+      "action": "User Authenticated",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:52:07.235Z"
+    },
+    {
+      "id": "LOG-1788335193687",
+      "action": "Staff Account Deactivated: courier_1788335186066@surgicals.pk",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Status set to inactive",
+      "timestamp": "2026-09-02T07:46:33.687Z"
+    },
+    {
+      "id": "LOG-1788335192985",
+      "action": "Support Note Appended to Order ORD-29761",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Customer verified address via phone call",
+      "timestamp": "2026-09-02T07:46:32.985Z"
+    },
+    {
+      "id": "LOG-1788335192199",
+      "action": "Delivery Status: Order ORD-29761 → Out for Delivery",
+      "actor": "courier_1788335186066@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Note: Dispatched via delivery bike unit 3",
+      "timestamp": "2026-09-02T07:46:32.199Z"
+    },
+    {
+      "id": "LOG-1788335190683",
+      "action": "Order ORD-29761 Assigned to Courier: Hamza Delivery Rider (USR-6605)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"trackingNumber\":\"DW-9360558\"}",
+      "timestamp": "2026-09-02T07:46:30.683Z"
+    },
+    {
+      "id": "LOG-1788335188103",
+      "action": "User Authenticated",
+      "actor": "courier_1788335186066@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:46:28.103Z"
+    },
+    {
+      "id": "LOG-1788335187313",
+      "action": "Staff Account Created: Hamza Delivery Rider (courier_1788335186066@surgicals.pk)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"permissions\":[\"delivery\"]}",
+      "timestamp": "2026-09-02T07:46:27.313Z"
+    },
+    {
+      "id": "LOG-1788335186011",
+      "action": "User Authenticated",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:46:26.011Z"
+    },
+    {
+      "id": "LOG-1788334995749",
+      "action": "Staff Account Deactivated: courier_1788334988864@surgicals.pk",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Status set to inactive",
+      "timestamp": "2026-09-02T07:43:15.749Z"
+    },
+    {
+      "id": "LOG-1788334995364",
+      "action": "Support Note Appended to Order ORD-98421",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Customer requested calling before arrival at Jail Road",
+      "timestamp": "2026-09-02T07:43:15.364Z"
+    },
+    {
+      "id": "LOG-1788334994798",
+      "action": "Delivery Status: Order ORD-98421 → Out for Delivery",
+      "actor": "courier_1788334988864@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "Note: Dispatched on courier bike 4",
+      "timestamp": "2026-09-02T07:43:14.798Z"
+    },
+    {
+      "id": "LOG-1788334991351",
+      "action": "Order ORD-98421 Assigned to Courier: Hamza Courier (USR-9573)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"trackingNumber\":\"DW-7829104\"}",
+      "timestamp": "2026-09-02T07:43:11.351Z"
+    },
+    {
+      "id": "LOG-1788334990267",
+      "action": "User Authenticated",
+      "actor": "courier_1788334988864@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:43:10.267Z"
+    },
+    {
+      "id": "LOG-1788334989687",
+      "action": "Staff Account Created: Hamza Courier (courier_1788334988864@surgicals.pk)",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "{\"permissions\":[\"delivery\"]}",
+      "timestamp": "2026-09-02T07:43:09.687Z"
+    },
+    {
+      "id": "LOG-1788334988834",
+      "action": "User Authenticated",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:43:08.834Z"
+    },
+    {
+      "id": "LOG-1788334175055",
+      "action": "User Authenticated",
+      "actor": "admin@surgicals.pk",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T07:29:35.055Z"
+    },
+    {
+      "id": "LOG-1788328979901",
+      "action": "Order ORD-32091 Status → Dispatched with Courier",
+      "actor": "Admin",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "ORD-32091",
+      "timestamp": "2026-09-02T06:02:59.901Z"
+    },
+    {
+      "id": "LOG-1788328073117",
+      "action": "User Authenticated",
+      "actor": "mr_xyz@surigical.com",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T05:47:53.118Z"
+    },
+    {
+      "id": "LOG-1788325129742",
+      "action": "User Authenticated",
+      "actor": "mr_xyz@surigical.com",
+      "origin": "::1",
+      "status": "SUCCESS",
+      "details": "",
+      "timestamp": "2026-09-02T04:58:49.742Z"
+    }
+  ],
+  "settings": {
+    "storeName": "Surgicals pk",
+    "contactEmail": "support@surgicals.pk",
+    "contactPhone": "0303-7333378",
+    "shippingFlatRate": 250,
+    "freeShippingThreshold": 5000,
+    "currency": "PKR",
+    "taxRate": 0,
+    "fbrNtn": "8192041-3",
+    "bankName": "Meezan Bank Limited",
+    "accountTitle": "Surgicals PK Healthcare Supplies",
+    "accountNumber": "PK36MEZN0001020105829102",
+    "maintenanceMode": false,
+    "logoText": "surgicals pk",
+    "logoIcon": "",
+    "topBarPhone": "0303-7333378",
+    "footerPlatformTitle": "PAKISTAN LARGEST HEALTHCARE PLATFORM",
+    "footerStat1Number": "1M+",
+    "footerStat1Label": "Satisfied Buyers",
+    "footerStat2Number": "2M+",
+    "footerStat2Label": "Orders Delivered",
+    "footerStat3Number": "100%",
+    "footerStat3Label": "Moneyback Guarantee",
+    "footerValue1Title": "Reliable",
+    "footerValue1Desc": "All products displayed are verified and of high quality with 100% satisfaction.",
+    "footerValue2Title": "Secure",
+    "footerValue2Desc": "SSL 128-bit encryption and Payment Card Industry Data Security Standard compliant.",
+    "footerValue3Title": "Affordable",
+    "footerValue3Desc": "Find affordable surgical items, save up to 60% on health products.",
+    "footerCopyright": "© 2007-2025 Surgicals.pk . Market By Hukumat Networks",
+    "socialFacebook": "https://www.facebook.com/Surgicalspk-105652255520730",
+    "socialInstagram": "https://www.instagram.com/surgicals_pk/",
+    "socialLinkedin": "https://www.linkedin.com/in/surgicals-pk-384448250/",
+    "metaTitle": "Surgicals.PK - Hospital & Medical Equipment Pakistan",
+    "metaDescription": "Shop verified hospital-grade surgical items, medical furniture, diagnostic devices, and mobility aids with 100% genuine warranty & nationwide delivery.",
+    "metaKeywords": "surgical equipment pakistan, medical instruments lahore, hospital furniture, physiotherapy machines",
+    "categoryTagline": "High grade medical and surgical supplies certified for clinical use across Pakistan.",
+    "announcementText": "Free Express Delivery on orders above Rs 5,000 across Lahore & Nationwide Dispatch via TCS / Daewoo Fastex",
+    "footerPhone": "0303 7333378"
+  },
+  "headerFooterData": {
+    "header": {
+      "storeName": "Surgicals.pk",
+      "logoText": "surgicals.pk",
+      "logoIcon": "✚",
+      "topBarPhone": "0303-7333378",
+      "announcementText": "Free Shipping on Orders Above Rs. 5,000 across Pakistan!"
+    },
+    "footer": {
+      "platformTitle": "PAKISTAN'S LARGEST HEALTHCARE PLATFORM",
+      "stat1Number": "1M+",
+      "stat1Label": "Satisfied Buyers",
+      "stat2Number": "2M+",
+      "stat2Label": "Orders Delivered",
+      "stat3Number": "100%",
+      "stat3Label": "Moneyback Guarantee",
+      "value1Title": "Reliable",
+      "value1Desc": "All products displayed are verified and of high quality with 100% satisfaction.",
+      "value2Title": "Secure",
+      "value2Desc": "SSL 128-bit encryption and Payment Card Industry Data Security Standard compliant.",
+      "value3Title": "Affordable",
+      "value3Desc": "Find affordable surgical items, save up to 60% on health products.",
+      "phone": "0303 7333378",
+      "facebookUrl": "https://www.facebook.com/Surgicalspk-105652255520730",
+      "linkedinUrl": "https://www.linkedin.com/in/surgicals-pk-384448250/",
+      "instagramUrl": "https://www.instagram.com/surgicals_pk/",
+      "copyrightText": "© 2007-2025 Surgicals.pk . Market By Hukumat Networks"
+    },
+    "seo": {
+      "metaTitle": "Surgicals.PK - Hospital & Medical Equipment Pakistan",
+      "metaDescription": "Shop verified hospital-grade surgical items, medical furniture, diagnostic devices, and mobility aids with 100% genuine warranty & nationwide delivery.",
+      "metaKeywords": "surgical equipment pakistan, medical instruments lahore, hospital furniture, physiotherapy machines"
+    },
+    "categoryDefaults": {
+      "tagline": "High grade medical and surgical supplies certified for clinical use across Pakistan."
+    }
+  }
+}
