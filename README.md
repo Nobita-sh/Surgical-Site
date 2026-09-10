@@ -29,7 +29,7 @@ Full access to `/admin` including user management, inventory CRUD, financial ana
 
 | Name | Email | Password | Role | Permissions | Clinic / Center |
 | :--- | :--- | :--- | :---: | :---: | :--- |
-| **MR_xyz Executive Admin** | `mr_xyz@surigical.com` | `e7te8t4X.` | `admin` | `All Permissions` | Surgicals.PK Executive HQ, Lahore |
+| **MR_xyz Executive Admin** | `m` | `e7.` | `admin` | `All Permissions` | Surgicals.PK Executive HQ, Lahore |
 | **Admin Procurement Desk** | `admin@surgicals.pk` | `adminpassword` | `admin` | `["orders", "products", "support", "delivery"]` | Surgicals.PK Operations, Lahore |
 
 ---
